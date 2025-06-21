@@ -1,113 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IndabaX South Sudan 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #fff;
       color: #333;
     }
-
     header {
       background-image: url('dummy-banner.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
-      padding: 6rem 1rem;
+      padding: 5rem 1rem 3rem;
       position: relative;
     }
-
     header h1 {
       font-size: 3rem;
       font-weight: bold;
+      margin-bottom: 0.5rem;
     }
-
-    header p {
-      font-size: 1.2rem;
+    header p.subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .stats-container {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
       margin-top: 1rem;
+      flex-wrap: wrap;
     }
-
-    .countdown {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 1rem;
+    .stat-block {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
       border-radius: 10px;
-      display: inline-block;
+      min-width: 120px;
     }
-
+    .stat-block h3 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
+    }
+    .stat-block p {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
     nav {
       background-color: #005a87;
       display: flex;
       justify-content: center;
       padding: 1rem;
       gap: 2rem;
+      flex-wrap: wrap;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
-    section {
+    main {
       max-width: 1000px;
       margin: 3rem auto;
-      padding: 1rem;
+      padding: 0 1rem;
     }
-
+    section {
+      margin-bottom: 3rem;
+    }
     section h2 {
       margin-bottom: 1rem;
-      font-size: 1.5rem;
-      border-left: 4px solid #005a87;
+      font-size: 1.7rem;
+      border-left: 5px solid #005a87;
       padding-left: 0.5rem;
+      color: #005a87;
     }
-
-    section p, section ul {
-      margin-bottom: 1.5rem;
+    section p,
+    section ul {
       line-height: 1.6;
+      margin-bottom: 1rem;
     }
-
     .team {
       display: flex;
-      gap: 2rem;
       flex-wrap: wrap;
+      gap: 2rem;
     }
-
     .team-member {
       width: 200px;
       text-align: center;
     }
-
     .team-member img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
+      margin-bottom: 0.5rem;
     }
-
+    .sponsors {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .sponsor-logo {
+      width: 120px;
+      height: 80px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #555;
+      font-size: 0.9rem;
+    }
+    #contact p {
+      margin-bottom: 0.5rem;
+    }
     footer {
       background-color: #003d5c;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
-      margin-top: 2rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    .countdown {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .stats-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        gap: 1rem;
+      }
+      .team-member {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -115,77 +162,131 @@
 
 <header>
   <h1>IndabaX South Sudan 2025</h1>
-  <p>Empowering South Sudan's AI Ecosystem for Sustainable Development</p>
+  <p class="subtitle">Empowering South Sudan's AI Ecosystem for Sustainable Development</p>
+  <div class="stats-container">
+    <div class="stat-block">
+      <h3>16-17 July 2025</h3>
+      <p>Event Date</p>
+    </div>
+    <div class="stat-block">
+      <h3>Juba, South Sudan</h3>
+      <p>Venue</p>
+    </div>
+    <div class="stat-block">
+      <h3>500+</h3>
+      <p>Attendance</p>
+    </div>
+    <div class="stat-block">
+      <h3>20+</h3>
+      <p>Speakers</p>
+    </div>
+  </div>
   <div class="countdown" id="countdown">Loading countdown...</div>
 </header>
 
 <nav>
   <a href="#about">About</a>
-  <a href="#details">Event</a>
-  <a href="#team">Team</a>
+  <a href="#event-details">Event Details</a>
+  <a href="#team">Organizing Team</a>
   <a href="#contact">Contact</a>
+  <a href="#sponsors">Sponsors</a>
 </nav>
 
-<section id="about">
-  <h2>About</h2>
-  <p>IndabaX South Sudan is part of the Deep Learning Indaba network, a movement to strengthen machine learning and artificial intelligence across Africa by empowering communities with knowledge, connection, and opportunity.</p>
-</section>
+<main>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      IndabaX South Sudan is part of the Deep Learning Indaba network, a movement to strengthen machine learning and artificial intelligence across Africa by empowering communities with knowledge, connection, and opportunity.
+    </p>
+  </section>
 
-<section id="details">
-  <h2>Event Details</h2>
-  <ul>
-    <li><strong>Date:</strong> To be announced</li>
-    <li><strong>Venue:</strong> Juba, South Sudan</li>
-    <li><strong>Format:</strong> In-person + virtual</li>
-    <li><strong>Includes:</strong> Talks, workshops, poster presentations, AI challenges</li>
-  </ul>
-</section>
+  <section id="event-details">
+    <h2>Event Details</h2>
+    <ul>
+      <li><strong>Date:</strong> 16th - 17th July, 2025</li>
+      <li><strong>Format:</strong> Physical / Virtual</li>
+      <li><strong>Host:</strong> Juba University (placeholder)</li>
+      <li><strong>Expected Attendance:</strong> 500+</li>
+      <li><strong>Speakers:</strong> 20+</li>
+      <li><strong>Event Highlights:</strong> Talks, workshops, poster presentations, AI challenges</li>
+    </ul>
+  </section>
 
-<section id="team">
-  <h2>Team</h2>
-  <div class="team">
-    <div class="team-member">
-      <img src="dummy-team1.jpg" alt="Team Member 1">
-      <p><strong>Jane Doe</strong><br>Coordinator</p>
+  <section id="team">
+    <h2>Organizing Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="dummy-team1.jpg" alt="Dr. Sakinat Folorunso" />
+        <p><strong>Dr. Sakinat Folorunso</strong><br>Lead Organizer / Steering Committee<br>Olabisi Onabanjo University</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team2.jpg" alt="Dr. Adekanmbi Olubayo" />
+        <p><strong>Dr. Adekanmbi Olubayo</strong><br>Steering Committee<br>Data Scientists Network (DSN)</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team3.jpg" alt="Prof. Francisca Oladipo" />
+        <p><strong>Prof. Francisca Oladipo</strong><br>Steering Committee<br>Thomas Adewunmi University</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team4.jpg" alt="Robert John" />
+        <p><strong>Robert John</strong><br>Steering Committee<br>Versus</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team5.jpg" alt="Adeola Lawal" />
+        <p><strong>Adeola Lawal</strong><br>LOC Chairperson IndabaX<br>Alluvium</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team6.jpg" alt="Ganiyat Kemi Afolabi-Yusuf" />
+        <p><strong>Ganiyat Kemi Afolabi-Yusuf</strong><br>LOC Chairperson Summit<br>Summit University</p>
+      </div>
     </div>
-    <div class="team-member">
-      <img src="dummy-team2.jpg" alt="Team Member 2">
-      <p><strong>John Smith</strong><br>Technical Lead</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>For inquiries, partnership opportunities, or participation, please contact us at:</p>
-  <p><a href="mailto:indaba.southsudan@gmail.com">indaba.southsudan@gmail.com</a></p>
-</section>
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p><strong>Address:</strong> Juba University, Juba, South Sudan</p>
+    <p><strong>Phone:</strong> +211 912 345 678, +211 911 234 567</p>
+    <p><strong>E-mail:</strong> <a href="mailto:indaba.southsudan@gmail.com">indaba.southsudan@gmail.com</a></p>
+  </section>
+
+  <section id="sponsors">
+    <h2>Our Sponsors</h2>
+    <div class="sponsors">
+      <div class="sponsor-logo">Sponsor 1</div>
+      <div class="sponsor-logo">Sponsor 2</div>
+      <div class="sponsor-logo">Sponsor 3</div>
+      <div class="sponsor-logo">Sponsor 4</div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>&copy; 2025 IndabaX South Sudan. All rights reserved.</p>
+  <p>© Copyright 2025 IndabaX South Sudan - All Rights Reserved</p>
 </footer>
 
 <script>
   // Countdown Timer Script
   const countdown = document.getElementById('countdown');
-  const eventDate = new Date('December 1, 2025 09:00:00').getTime();
+  const eventDate = new Date('July 16, 2025 09:00:00').getTime();
 
-  const updateCountdown = () => {
+  function updateCountdown() {
     const now = new Date().getTime();
     const distance = eventDate - now;
 
     if (distance < 0) {
-      countdown.innerHTML = "The event has started!";
+      countdown.innerHTML = 'The event has started!';
       return;
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
-  };
+  }
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
