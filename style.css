@@ -224,6 +224,22 @@
       border-radius: 10px;
       margin-bottom: 0.5rem;
     }
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: #005a87;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #003d5c;
+}
+
 
     .sponsors {
       display: flex;
