@@ -17,39 +17,28 @@
       background-color: #fff;
       color: #333;
     }
-    nav {
-  background-color: rgba(0, 90, 135, 0.95);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1.5rem;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+ nav {Add commentMore actions
+      background-color: rgba(0, 90, 135, 0.95);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-.nav-logo img {
-  height: 50px;
-  width: auto;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     header {
       background-image: url('backdrop-banner.jpg');
@@ -280,17 +269,12 @@
 <body>
 
 <nav>
-  <div class="nav-logo">
-    <img src="logo.png" alt="IndabaX Logo" />
-  </div>
-  <div class="nav-links">
   <a href="#about">About</a>
   <a href="#Speakers">Speakers</a>
   <a href="#Exhibitors">Exhibitors</a>
   <a href="#team">Team</a>
   <a href="#contact">Contact</a>
-  <a href="#hackathon">Hackathon</a>
-  </div>
+  <a href="hackathon.html" class="hackathon-btn">Hackathon</a>
 </nav>
 
 <header>
