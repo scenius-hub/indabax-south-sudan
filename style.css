@@ -1,0 +1,273 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+ nav 
+    {
+      background-color: #003d5c;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hackathon-btn {
+  background-color: #ffc107;
+  color: #003d5c;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hackathon-btn:hover {
+  background-color: #e0a800;
+  text-decoration: none;
+}
+
+    header {
+      background-image: url('backdrop-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      color: white;
+    } 
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    header h1,
+    header p,
+    .stats-container,
+    .countdown {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    header p.subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-block {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      min-width: 130px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .stat-block h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-block p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #eee;
+    }
+
+    .countdown {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid #fff;
+      border-radius: 20px;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-top: 2rem;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .countdown:hover {
+      transform: scale(1.03);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .register-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.register-btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.register-btn.attend {
+  background-color: #ffcc00;
+  color: #003d5c;
+}
+
+.register-btn.attend:hover {
+  background-color: #ffdd33;
+  transform: scale(1.05);
+}
+
+.register-btn.exhibit {
+  background-color: #005a87;
+  color: #fff;
+}
+
+.register-btn.exhibit:hover {
+  background-color: #0073aa;
+  transform: scale(1.05);
+}
+
+.register-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+      border-left: 5px solid #005a87;
+      padding-left: 0.5rem;
+      color: #005a87;
+    }
+
+    section p, section ul {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .team-member {
+      width: 200px;
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .sponsors {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .sponsor-logo {
+      width: 120px;
+      height: 80px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    #contact p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #003d5c;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .stats-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        gap: 1rem;
+      }
+      .team-member {
+        width: 100%;
+      }
+    }
