@@ -127,6 +127,55 @@
       transform: scale(1.03);
       background: rgba(255, 255, 255, 0.2);
     }
+    .register-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.register-btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.register-btn.attend {
+  background-color: #ffcc00;
+  color: #003d5c;
+}
+
+.register-btn.attend:hover {
+  background-color: #ffdd33;
+  transform: scale(1.05);
+}
+
+.register-btn.exhibit {
+  background-color: #005a87;
+  color: #fff;
+}
+
+.register-btn.exhibit:hover {
+  background-color: #0073aa;
+  transform: scale(1.05);
+}
+
+.register-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
 
     main {
       max-width: 1000px;
@@ -250,6 +299,11 @@
     </div>
   </div>
   <div class="countdown" id="countdown">Loading countdown...</div>
+  <div class="register-buttons">
+  <a href="https://example.com/register-attend" class="register-btn attend">Register to Attend</a>
+  <a href="https://example.com/register-exhibit" class="register-btn exhibit">Register to Exhibit or Present</a>
+</div>
+<p class="register-info">Join as an attendee, exhibitor, or paper presenter and be part of South Sudan’s AI future.</p>
 </header>
 
 <main>
