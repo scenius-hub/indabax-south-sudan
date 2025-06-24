@@ -48,7 +48,7 @@
 }
 
     header {
-      background-image: url('backdrop-banner.jpg');
+      background-image: url('backdrop.png');
       background-size: cover;
       background-position: center;
       position: relative;
