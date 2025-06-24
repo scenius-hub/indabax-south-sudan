@@ -17,13 +17,28 @@
       color: #333;
     }
     header {
-      background-image: url('backdrop-banner.jpg');
+      background-image: url('backdrop-banner.jpg'); /* Replace with your actual image path */
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
       padding: 5rem 1rem 3rem;
       position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1,
+    header p,
+    .stats-container,
+    .countdown {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
       font-size: 3rem;
@@ -55,6 +70,11 @@
       font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.05em;
+    }
+    .countdown {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
     }
     nav {
       background-color: #005a87;
@@ -139,11 +159,6 @@
       font-size: 0.9rem;
       margin-top: 3rem;
     }
-    .countdown {
-      font-weight: bold;
-      font-size: 1.4rem;
-      margin-top: 0.5rem;
-    }
     @media (max-width: 600px) {
       .stats-container {
         flex-direction: column;
@@ -159,14 +174,16 @@
   </style>
 </head>
 <body>
+
 <nav>
   <a href="#about">About</a>
   <a href="#event-details">Event Details</a>
-  <a href="#team">Organizing Team</a>
+  <a href="#Speakers">Speakers</a>
+  <a href="#Exhibitors">Exhibitors</a>
+  <a href="#team">Team</a>
   <a href="#contact">Contact</a>
-  <a href="#sponsors">Sponsors</a>
 </nav>
-  
+
 <header>
   <h1>IndabaX South Sudan 2025</h1>
   <p class="subtitle">Empowering South Sudan's AI Ecosystem for Sustainable Development</p>
@@ -176,7 +193,7 @@
       <p>Event Date</p>
     </div>
     <div class="stat-block">
-      <h3> Scenius Hub, Juba, South Sudan</h3>
+      <h3>Scenius Hub, Juba</h3>
       <p>Venue</p>
     </div>
     <div class="stat-block">
@@ -202,13 +219,33 @@
   <section id="event-details">
     <h2>Event Details</h2>
     <ul>
-      <li><strong>Date:</strong>Saturday, 19th July, 2025</li>
+      <li><strong>Date:</strong> Saturday, 19th July 2025</li>
       <li><strong>Format:</strong> Physical Attendance</li>
       <li><strong>Host:</strong> Scenius Hub</li>
       <li><strong>Expected Attendance:</strong> 100+</li>
       <li><strong>Speakers:</strong> 20+</li>
       <li><strong>Event Highlights:</strong> Talks, workshops, poster presentations, AI challenges</li>
     </ul>
+  </section>
+
+  <section id="Speakers">
+    <h2>Our Speakers</h2>
+    <div class="sponsors">
+      <div class="sponsor-logo">Speaker 1</div>
+      <div class="sponsor-logo">Speaker 2</div>
+      <div class="sponsor-logo">Speaker 3</div>
+      <div class="sponsor-logo">Speaker 4</div>
+    </div>
+  </section>
+
+  <section id="Exhibitors">
+    <h2>Our Exhibitors</h2>
+    <div class="sponsors">
+      <div class="sponsor-logo">Exhibitor 1</div>
+      <div class="sponsor-logo">Exhibitor 2</div>
+      <div class="sponsor-logo">Exhibitor 3</div>
+      <div class="sponsor-logo">Exhibitor 4</div>
+    </div>
   </section>
 
   <section id="team">
@@ -247,26 +284,6 @@
     <p><strong>Phone:</strong> +211 919 629 965, +211 919 757 898</p>
     <p><strong>E-mail:</strong> <a href="mailto:tech@sceniushub.com">tech@sceniushub.com</a></p>
   </section>
-
-  <section id="Speakers">
-    <h2>Our Speakers</h2>
-    <div class="sponsors">
-      <div class="sponsor-logo">Speaker 1</div>
-      <div class="sponsor-logo">Speaker 2</div>
-      <div class="sponsor-logo">Speaker 3</div>
-      <div class="sponsor-logo">Speaker 4</div>
-    </div>
-  </section>
-
-    <section id="Exhibitors">
-    <h2>Our Exhibitors</h2>
-    <div class="exhibitors">
-      <div class="sponsor-logo">exhibitors 1</div>
-      <div class="sponsor-logo">exhibitors 2</div>
-      <div class="sponsor-logo">exhibitors 3</div>
-      <div class="sponsor-logo">exhibitors 4</div>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -276,7 +293,7 @@
 <script>
   // Countdown Timer Script
   const countdown = document.getElementById('countdown');
-  const eventDate = new Date('July 19, 2025 08:00:00').getTime();
+  const eventDate = new Date('2025-07-19T08:00:00Z').getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -288,9 +305,7 @@
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
