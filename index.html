@@ -60,16 +60,129 @@
     </p>
   </section>
 
+   <section id="speaker">
+    <h2>Our Speakers</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="dummy-speaker1.jpg" alt="Speaker-1" />
+        <p><strong>Ms. Poni Henry</strong><br>Local Organizer<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-speaker2.jpg" alt="Speaker-2" />
+        <p><strong>Yasir Logwuru</strong><br>Exhibitions and Poster Presentations Coordinator<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-speaker3.jpg" alt="Speaker-3" />
+        <p><strong>Koropo Martina</strong><br>Logistics and Vendor Management<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-speaker3.jpg" alt="Speaker-4" />
+        <p><strong>Imma Mike</strong><br>Finance and Admin<br>Versus</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="exhibitors">
+    <h2>The Exhibitors</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="dummy-exhibitor1.jpg" alt="Exhibitor-1" />
+        <p><strong>Ms. Poni Henry</strong><br>Local Organizer<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-exhibitor2.jpg" alt="Exhibitor-2" />
+        <p><strong>Yasir Logwuru</strong><br>Exhibitions and Poster Presentations Coordinator<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-exhibitor3.jpg" alt="Exhibitor-3" />
+        <p><strong>Koropo Martina</strong><br>Logistics and Vendor Management<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-exhibitor4.jpg" alt="Exhibitor-4" />
+        <p><strong>Imma Mike</strong><br>Finance and Admin<br>Versus</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="team">
+    <h2>Organizing Committee</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="dummy-team1.jpg" alt="Poni Henry" />
+        <p><strong>Ms. Poni Henry</strong><br>Local Organizer<br>IndabaX South Sudan</p>
+         <div class="social-icons">
+           <a href="https://linkedin.com/in/ponihenry" target="_blank"><i class="fab fa-linkedin"></i></a>
+           <a href="https://twitter.com/ponihenry" target="_blank"><i class="fab fa-twitter"></i></a>
+           <a href="https://facebook.com/ponihenry" target="_blank"><i class="fab fa-facebook"></i></a>
+           <a href="https://ponihenry.com" target="_blank"><i class="fas fa-globe"></i></a>
+         </div>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team2.jpg" alt="Yasir" />
+        <p><strong>Yasir Logwuru</strong><br>Exhibitions and Poster Presentations Coordinator<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team3.jpg" alt="Koropo Martina" />
+        <p><strong>Koropo Martina</strong><br>Logistics and Vendor Management<br>IndabaX South Sudan</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team3.jpg" alt="Imma Mike" />
+        <p><strong>Imma Mike</strong><br>Finance and Admin<br>Versus</p>
+      </div>
+      <div class="team-member">
+        <img src="dummy-team4.jpg" alt="Nyuol" />
+        <p><strong>Nyuol</strong><br>Hackathon Coordinator<br>Versus</p>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <h2>Get in Touch</h2>
     <p><strong>Address:</strong> Juba, South Sudan</p>
     <p><strong>Phone:</strong> +211 919 629 965, +211 919 757 898</p>
     <p><strong>E-mail:</strong> <a href="mailto:tech@sceniushub.com">tech@sceniushub.com</a></p>
   </section>
+    <section id="sponsors">
+    <h2>Our Partners</h2>
+    <div class="sponsors">
+      <div class="sponsor-logo">Speaker 1</div>
+      <div class="sponsor-logo">Speaker 2</div>
+      <div class="sponsor-logo">Speaker 3</div>
+      <div class="sponsor-logo">Speaker 4</div>
+    </div>
+  </section>
 </main>
 
 <footer>
   <p>© Copyright 2025 IndabaX South Sudan - All Rights Reserved</p>
 </footer>
+
+<script>
+  // Countdown Timer Script
+  const countdown = document.getElementById('countdown');
+  const eventDate = new Date('2025-07-19T08:00:00Z').getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+      countdown.innerHTML = 'The event has started!';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
 </body>
 </html>
