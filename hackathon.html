@@ -2,126 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IndabaX South Sudan Hackathon 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IndabaX Hackathon 2025</title>
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Open Sans', sans-serif;
-      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
       color: #333;
     }
+
+    .logo-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .logo-back {
+      width: 50px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-back:hover {
+      transform: scale(1.1);
+    }
+
     header {
-      background: linear-gradient(to right, #003d5c, #005a87);
+      background-image: url('hackathon-banner.jpg'); /* Replace with your banner */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 7rem 2rem 4rem;
       color: white;
-      padding: 4rem 1rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
     }
+
+    header h1,
     header p {
-      font-size: 1.2rem;
+      position: relative;
+      z-index: 2;
     }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 1rem;
     }
+
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
+
     section h2 {
+      font-size: 1.8rem;
       color: #005a87;
+      border-left: 5px solid #005a87;
+      padding-left: 0.7rem;
       margin-bottom: 1rem;
-      border-left: 4px solid #005a87;
-      padding-left: 0.5rem;
     }
-    section p, ul {
+
+    section p {
       line-height: 1.6;
+      margin-bottom: 1rem;
     }
-    .register-btn {
-      display: inline-block;
-      background-color: #005a87;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
     }
-    .register-btn:hover {
-      background-color: #0073aa;
-    }
+
     footer {
       background-color: #003d5c;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
       margin-top: 3rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #005a87;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0073aa;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Back to homepage logo -->
+  <a href="index.html" class="logo-link">
+    <img src="indabax-logo.png" alt="IndabaX Logo" class="logo-back" />
+  </a>
+
   <header>
-    <h1>IndabaX South Sudan Hackathon 2025</h1>
-    <p>Collaborate. Code. Create. Shape the future of AI in South Sudan.</p>
+    <h1>Hackathon @ IndabaX South Sudan 2025</h1>
+    <p>Join our AI Hackathon to collaborate, innovate, and compete in solving real-world challenges using artificial intelligence for social good.</p>
   </header>
 
   <main>
     <section>
-      <h2>About the Hackathon</h2>
-      <p>
-        The IndabaX South Sudan Hackathon 2025 is a high-energy, hands-on event designed to bring together young innovators, developers, students, and professionals to solve local challenges using artificial intelligence and digital technologies. Whether you're new to coding or experienced in machine learning, this hackathon is for you!
-      </p>
+      <h2>Overview</h2>
+      <p>This year’s IndabaX South Sudan Hackathon invites developers, data scientists, students, and creatives to build impactful AI solutions aligned with the Sustainable Development Goals (SDGs).</p>
+    </section>
+
+    <section>
+      <h2>Theme</h2>
+      <p><strong>“AI for Sustainable Impact in South Sudan”</strong> — Solve problems in areas like health, education, agriculture, peacebuilding, and more using AI and data-driven solutions.</p>
+    </section>
+
+    <section>
+      <h2>Tracks</h2>
+      <ul>
+        <li>HealthTech & Reproductive Health</li>
+        <li>Climate & Agriculture</li>
+        <li>Digital Literacy & EdTech</li>
+        <li>Peacebuilding & Inclusion</li>
+      </ul>
     </section>
 
     <section>
       <h2>Who Can Participate?</h2>
-      <ul>
-        <li>University students (technical and non-technical)</li>
-        <li>Early-career professionals in tech</li>
-        <li>Anyone with a passion for problem-solving and innovation</li>
-      </ul>
+      <p>Everyone is welcome — from beginners to experienced developers! You can participate solo or in teams of up to 5 people.</p>
     </section>
 
     <section>
-      <h2>Tracks & Challenges</h2>
-      <p>
-        Participants can choose from several exciting themes:
-      </p>
-      <ul>
-        <li>Health & Wellbeing</li>
-        <li>Agriculture & Food Security</li>
-        <li>Climate Action</li>
-        <li>Education & Access to Learning</li>
-      </ul>
+      <h2>Prizes</h2>
+      <p>Top teams will win exciting tech prizes and mentorship opportunities. Winning ideas may also be incubated further through Scenius Hub programs.</p>
     </section>
 
     <section>
-      <h2>Prizes & Recognition</h2>
-      <p>
-        Top teams will be awarded prizes, mentorship opportunities, and certificates of recognition. Winners may also be invited to present their projects at future tech events.
-      </p>
-    </section>
-
-    <section>
-      <h2>Register to Participate</h2>
-      <p>
-        Ready to build the future? Register now to secure your spot.
-      </p>
-      <a class="register-btn" href="https://forms.gle/YOUR-HACKATHON-REGISTRATION-LINK" target="_blank">Register Now</a>
+      <h2>How to Register</h2>
+      <p>Click the button below to register as a participant.</p>
+      <a href="https://your-google-form-link.com" class="cta-button" target="_blank">Register Now</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 IndabaX South Sudan Hackathon. All Rights Reserved.</p>
+    <p>&copy; 2025 IndabaX South Sudan — Hackathon</p>
   </footer>
+
 </body>
 </html>
