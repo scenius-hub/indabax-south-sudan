@@ -260,26 +260,36 @@ header::before {
 }
 
 
-    .sponsors {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
+.partners {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
 
-    .sponsor-logo {
-      width: 120px;
-      height: 80px;
-      background: #ddd;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      font-weight: bold;
-      color: #555;
-      font-size: 0.9rem;
-    }
+.partners h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #005a87;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.partner-logos img {
+  max-height: 80px; /* Controls logo size */
+  max-width: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.1);
+}
 
     #contact p {
       margin-bottom: 0.5rem;
