@@ -276,7 +276,7 @@ header::before {
   display: flex;
   justify-content: center;  /* Centers the row horizontally */
   align-items: center;      /* Vertically centers logos */
-  flex-wrap: nowrap;        /* Prevents wrapping to a new line */
+  flex-wrap: wrap;        /* Prevents wrapping to a new line */
   gap: 2rem;                /* Space between logos */
   overflow-x: auto;         /* Allows horizontal scroll on small screens */
   padding: 0.5rem;
