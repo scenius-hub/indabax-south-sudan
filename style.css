@@ -262,8 +262,8 @@ header::before {
 
 .partners {
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 1.5rem 1rem;
+  background-color: #f9f9f9;
 }
 
 .partners h2 {
@@ -274,21 +274,24 @@ header::before {
 
 .partner-logos {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: center;  /* Centers the row horizontally */
+  align-items: center;      /* Vertically centers logos */
+  flex-wrap: nowrap;        /* Prevents wrapping to a new line */
+  gap: 2rem;                /* Space between logos */
+  overflow-x: auto;         /* Allows horizontal scroll on small screens */
+  padding: 0.5rem;
 }
 
 .partner-logos img {
-  max-height: 80px; /* Controls logo size */
-  max-width: 150px;
+  height: 60px;             /* All logos exactly 60px tall */
+  width: auto;              /* Preserve original proportions */
   object-fit: contain;
-  transition: transform 0.3s ease;
+  flex-shrink: 0;           /* Prevents shrinking below the set height */
+  transition: transform 0.2s ease;
 }
 
 .partner-logos img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
     #contact p {
