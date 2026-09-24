@@ -86,6 +86,12 @@
       margin-bottom: 1rem;
     }
 
+    section h3 {
+      font-size: 1.2rem;
+      color: #005a87;
+      margin-bottom: 0.5rem;
+    }
+
     section p {
       line-height: 1.6;
       margin-bottom: 1rem;
@@ -96,6 +102,11 @@
       margin-bottom: 1rem;
     }
 
+    li {
+      line-height: 1.6;
+      margin-bottom: 0.4rem;
+    }
+
     .date-banner {
       background-color: #e8f4fa;
       border-left: 5px solid #005a87;
@@ -103,6 +114,70 @@
       border-radius: 4px;
       font-weight: bold;
       margin-bottom: 1.5rem;
+    }
+
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem 1.5rem;
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .stat-box .stat-value {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #005a87;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-tag {
+      background-color: #005a87;
+      color: white;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .target-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .target-box code {
+      background-color: #f0f0f0;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     footer {
@@ -129,6 +204,16 @@
       background-color: #0073aa;
     }
 
+    .cta-button.secondary {
+      background-color: white;
+      color: #005a87;
+      border: 2px solid #005a87;
+    }
+
+    .cta-button.secondary:hover {
+      background-color: #e8f4fa;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -149,34 +234,82 @@
 
   <header>
     <h1>Hackathon @ IndabaX South Sudan 2026</h1>
-    <p>Join our AI Hackathon to collaborate, innovate, and compete in solving real-world South Sudanese challenges using artificial intelligence for social good.</p>
+    <p>Food Insecurity Forecasting Challenge — build an AI early-warning model for South Sudan, using real data from the National Bureau of Statistics.</p>
   </header>
 
   <main>
     <section>
       <h2>Overview</h2>
-      <p>IndabaX South Sudan 2026 invites developers, data scientists, students, and AI enthusiasts to take part in an AI Hackathon designed to drive local, real-world impact. The hackathon is the culmination of the two hands-on Indaba meetups, giving participants the chance to apply their machine learning skills to a live challenge grounded in real South Sudanese data.</p>
+      <p>IndabaX South Sudan 2026 invites developers, data scientists, students, and AI enthusiasts to take part in an AI Hackathon designed to drive local, real-world impact. The hackathon is the culmination of the two hands-on Indaba meetups, giving participants the chance to apply their machine learning skills to a live challenge hosted on Zindi.</p>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-value">24–30 Sep</div>
+          <div class="stat-label">2026</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">3,000</div>
+          <div class="stat-label">Zindi Points</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">Up to 4</div>
+          <div class="stat-label">Members per team</div>
+        </div>
+      </div>
+      <div class="skills-row">
+        <span class="skill-tag">Visualisation</span>
+        <span class="skill-tag">Classification</span>
+        <span class="skill-tag">Data Analysis</span>
+      </div>
     </section>
 
     <section>
-      <h2>Challenge & Format</h2>
-      <div class="date-banner">
-        📅 Launches Thursday, 24th September 2026 at 10:00 PM &middot; Runs for 6 days &middot; Ends 30th September 2026
+      <h2>The Challenge: Can you predict food insecurity risk?</h2>
+      <p>South Sudan's food security is assessed using the <strong>Integrated Food Security Phase Classification (IPC)</strong>, which periodically classifies each county's severity from Minimal to Catastrophe. As of the most recent analysis, <strong>7.7 million people (57% of South Sudan's population)</strong> were facing Crisis-or-worse food insecurity — driven by conflict, low agricultural production, economic shocks, and climate events like flooding.</p>
+      <p>But formal IPC classifications only happen a few times a year and require extensive analysis by food security experts. Between assessment cycles, humanitarian and government responders need faster ways to identify counties whose situation may be deteriorating.</p>
+      <p><strong>Your task:</strong> build a model that predicts whether a South Sudanese county will experience Crisis-or-worse food insecurity (IPC Phase 3+) during the current assessment period — using only information available before that period, including:</p>
+      <ul>
+        <li>The county's population</li>
+        <li>The year and month of the assessment period</li>
+        <li>The county's IPC classification during its previous assessment</li>
+        <li>The percentage of the county's population previously classified in IPC Phase 3 or above</li>
+        <li>The county's most recently available cereal production figures</li>
+        <li>The county's most recently available cereal production gap</li>
+      </ul>
+      <p>This is a genuine forecasting challenge — all features represent information that would have been available before the target assessment period, with no current-period IPC information included in the inputs. A successful solution could help humanitarian organisations and government agencies identify counties requiring closer assessment and prioritize limited field and response resources. The model is intended to complement the IPC's expert-led process — not replace it.</p>
+    </section>
+
+    <section>
+      <h2>How It's Scored</h2>
+      <p>Submissions are evaluated on <strong>AUC (Area Under the Curve)</strong> — how well your model distinguishes counties at Crisis-or-worse risk from those that aren't.</p>
+      <div class="target-box">
+        <p style="margin-bottom: 0.5rem;"><strong>Target variable: <code>food_insecurity_risk</code></strong></p>
+        <ul style="margin-bottom: 0;">
+          <li><strong>1</strong> = the county is in Crisis, Emergency, or Catastrophe (IPC Phase 3+)</li>
+          <li><strong>0</strong> = the county is below Crisis level (IPC Phase 1 or 2)</li>
+        </ul>
       </div>
-      <p>This year's challenge asks participants to build a model that predicts food insecurity risk across South Sudan's counties, using real historical data on food security classifications and agricultural production sourced from South Sudan's National Bureau of Statistics via CLIMIS.</p>
-      <p>The hackathon is hosted on Zindi. Full challenge details, the dataset, rules, and evaluation criteria are available on the competition page:</p>
-      <p><a href="https://zindi.world/competitions/indabax-south-sudan" class="cta-button" target="_blank" rel="noopener">View Challenge on Zindi</a></p>
+      <p>Zindi maintains a public leaderboard (≈30% of the test dataset) during the challenge, and a private leaderboard (the remaining 70%) that determines final rankings once the challenge closes.</p>
     </section>
 
     <section id="guidelines">
-      <h2>Hackathon Guidelines & Eligibility Criteria</h2>
+      <h2>Hackathon Guidelines & Eligibility</h2>
 
       <h3>Who Can Participate</h3>
       <ul>
-        <li><strong>Open to All:</strong> Any person interested in AI, machine learning, and data science is welcome to participate.</li>
-        <li><strong>Team Size:</strong> Teams must have <strong>1–3 members</strong>.</li>
-        <li><strong>Skill Levels:</strong> Participants of all experience levels are encouraged to join. We value both beginners and seasoned developers.</li>
+        <li><strong>Open to All:</strong> This challenge is open to new users on Zindi who meet the challenge eligibility requirements. All experience levels are welcome.</li>
+        <li><strong>Team Size:</strong> Compete individually or in teams of up to <strong>4 members</strong>.</li>
       </ul>
+
+      <h3>Rules at a Glance</h3>
+      <ul>
+        <li>Open-source languages, packages, and tools only — no AutoML pipelines that auto-generate full modelling solutions.</li>
+        <li>Only the provided challenge data may be used — no external datasets.</li>
+        <li>Maximum 10 submissions per day, 300 for the entire challenge.</li>
+        <li>Before the challenge closes, you must select two submissions for private leaderboard evaluation.</li>
+        <li>Top 10 finishers on the private leaderboard must submit reproducible code within 48 hours of being requested, along with a short write-up (features used, validation strategy, chosen decision threshold with F1/precision/recall) and a presentation at the Showcase.</li>
+        <li>Challenge data is available under a CC BY-SA 4.0 licence.</li>
+      </ul>
+      <p>Full official rules are on the <a href="https://zindi.world/competitions/indabax-south-sudan" target="_blank" rel="noopener">Zindi challenge page</a>.</p>
 
       <h3>Additional Notes</h3>
       <ul>
@@ -188,4 +321,22 @@
 
     <section>
       <h2>Prizes</h2>
-      <p>Top teams will win exciting prizes and swag, as well as
+      <p>Compete for <strong>3,000 Zindi points</strong>, plus swag and prizes from our partners. Teams that go beyond a notebook to build a working interface for their model — a dashboard, small app, or API — are eligible for bonus recognition.</p>
+    </section>
+
+    <section>
+      <h2>Get Started</h2>
+      <p>Registration for the IndabaX South Sudan 2026 Hackathon is open now. Fill out the form below to receive your secret access code for the challenge:</p>
+      <div class="button-row">
+        <a href="https://forms.gle/wdqNcF1GXJhdoyAM7" class="cta-button" target="_blank" rel="noopener">Register to Get Your Access Code</a>
+        <a href="https://zindi.world/competitions/indabax-south-sudan" class="cta-button secondary" target="_blank" rel="noopener">View Full Challenge on Zindi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AI IndabaX South Sudan — Hackathon, organized by Scenius Hub</p>
+  </footer>
+
+</body>
+</html>
